@@ -1,0 +1,21 @@
+name: Branch Delivery Pipeline
+
+on:
+  push:
+    branches:
+      - "develop-*"
+      - "feature-*"
+      - "release-*"
+      - "hotfix-*"
+      - main
+      - new-deploy-stuff
+      - new-deploy-stuff-and-epreprod
+
+permissions:
+  actions: read
+  contents: read
+  pull-requests: read
+
+jobs:
+  delivery:
+    uses: JSL-Inc/new-golden-path-workflows/.github/workflows/deploy.yml@main
