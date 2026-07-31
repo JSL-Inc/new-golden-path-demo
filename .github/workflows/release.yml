@@ -13,10 +13,6 @@ permissions:
   contents: write
   pull-requests: read
 
-concurrency:
-  group: production-release-${{ github.event.workflow_run.head_sha }}
-  cancel-in-progress: false
-
 jobs:
   release:
     uses: JSL-Inc/new-golden-path-workflows/.github/workflows/release.yml@main
