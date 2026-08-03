@@ -8,8 +8,6 @@ on:
       - "release-*"
       - "hotfix-*"
       - main
-      - new-deploy-stuff
-      - new-deploy-stuff-and-epreprod
 
 permissions:
   actions: read
@@ -18,4 +16,5 @@ permissions:
 
 jobs:
   delivery:
-    uses: JSL-Inc/new-golden-path-workflows/.github/workflows/deploy.yml@main
+    uses: JSL-Inc/new-golden-path-workflows/.github/workflows/deploy.yml@condense-testing-branch
+
