@@ -3,6 +3,7 @@ name: CI
 on:
   pull_request:
     types: [opened, reopened, synchronize, ready_for_review]
+  merge_group:
 
 permissions:
   contents: read
@@ -10,3 +11,4 @@ permissions:
 jobs:
   quality:
     uses: JSL-Inc/new-golden-path-workflows/.github/workflows/ci.yml@condense-testing-branch
+
