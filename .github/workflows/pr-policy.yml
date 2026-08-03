@@ -1,0 +1,13 @@
+name: PR Policy
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review, labeled, unlabeled]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  policy:
+    uses: JSL-Inc/new-golden-path-workflows/.github/workflows/pr-policy.yml@condense-testing-branch
